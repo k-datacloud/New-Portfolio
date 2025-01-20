@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+@use 'functions' as functions;
+
+.post-page {
+    width: 100%;
+    margin-bottom: 120px;
+
+    @include functions.respond-to(tb) {
+        width: 100%;
+        margin-left: 0;
+
+        @include functions.respond-to(sp) {
+            margin-bottom: 80px;
+        }
+    }
+
+    .post-page-inner {
+        width: 70%;
+        max-width: 900px;
+        margin: 0 auto;
+
+        @include functions.respond-to(tb) {
+            width: 90%;
+        }
+    }
+
+    .post-container {
+        margin-bottom: 120px;
+    }
+
+    &__title {
+        @include functions.raleway;
+        font-size: 30px;
+        letter-spacing: 3px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 80px;
+        color: #333333;
+
+        @include functions.respond-to(tb) {
+            font-size: 24px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+    }
+
+    .detail {
+        margin-bottom: 120px;
+
+        @include functions.respond-to(sp) {
+            margin-bottom: 80px;
+        }
+
+        .detail-item {
+            display: flex;
+            margin-bottom: 40px;
+
+            @include functions.respond-to(sp) {
+                margin-bottom: 30px;
+                flex-direction: column;
+            }
+
+            &:last-child {
+                margin-bottom: 0
+            }
+        }
+
+        &__title {
+            @include functions.raleway;
+            font-size: 2rem;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-weight: 500;
+            flex: 1;
+            color: #333333;
+
+            @include functions.respond-to(sp) {
+                font-size: 1.6rem;
+                margin-bottom: 10px;
+                line-height: 1.6;
+            }
+        }
+
+        &__text {
+            flex: 5;
+            text-align: start;
+            @include functions.notosans;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            line-height: 1.8;
+            text-align: justify;
+            color: #333333;
+
+            @include functions.respond-to(sp) {
+                font-size: 1.2rem;
+            }
+
+            &--en {
+                @include functions.raleway;
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 1.8;
+                letter-spacing: 1px;
+                text-align: justify;
+                flex: 5;
+                color: #333333;
+
+                @include functions.respond-to(sp) {
+                    font-size: 1.4rem;
+                }
+            }
+
+            &--url {
+                @include functions.raleway;
+                font-weight: normal;
+                font-size: 1.6rem;
+                line-height: 1.8;
+                letter-spacing: 1px;
+                text-align: justify;
+                flex: 5;
+                color: #333333;
+                text-decoration: underline;
+
+                @include functions.respond-to(sp) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .text-outline {
+
+            @include functions.respond-to(sp) {
+                line-height: 2.4;
+            }
+        }
+    }
+
+    &__text {
+        text-align: center
+    }
+
+    &__link {
+        @include functions.notosans;
+        color: #1A1919;
+        font-size: 16px;
+        letter-spacing: 1.8px;
+        position: relative;
+
+        @include functions.respond-to(sp) {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            margin: 4px auto 0 auto;
+            width: 15%;
+            height: 1.5px;
+            background-color: #1A1919;
+            // position: absolute;
+            // top: 40px;
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left top;
+            transition: .3s ease-in-out;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            transform: scaleX(1);
+            transition: .3s ease-in-out;
+        }
+    }
+
+}

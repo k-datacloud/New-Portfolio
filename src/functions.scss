@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@use "sass:map";
+
+@mixin notosans {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@mixin raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@mixin instrument {
+    font-family: "Instrument Sans", serif;
+    font-optical-sizing: auto;
+}
+
+$breakpoints: (
+    "sp": 768px,
+    "tb": 1024px,
+);
+
+@mixin respond-to($breakpoint) {
+    @if map.has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map.get($breakpoints, $breakpoint);
+
+        @media (max-width: $breakpoint-value) {
+            @content;
+        }
+    }
+}
+
+;
