@@ -519,7 +519,7 @@ html {
         &__link {
             @include functions.instrument;
             font-weight: normal;
-            letter-spacing: 1px;
+            font-weight: 600;
             color: #ffffff;
             font-size: 1.8rem;
             position: relative;

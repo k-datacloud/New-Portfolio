@@ -476,7 +476,7 @@ html {
   font-family: "Instrument Sans", serif;
   font-optical-sizing: auto;
   font-weight: normal;
-  letter-spacing: 1px;
+  font-weight: 600;
   color: #ffffff;
   font-size: 1.8rem;
   position: relative;
@@ -580,27 +580,12 @@ html {
     font-size: 60px;
   }
 }
-.about-page .about-mv__text {
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-size: 40px;
-  font-weight: 600;
-  color: #000000;
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 1024px) {
-  .about-page .about-mv__text {
-    font-size: 24px;
-  }
-}
-.about-page .about-mv .arrow-img {
+.about-page .about-mv .arrow-img img {
   width: 70px;
   animation: arrow 2s infinite;
 }
 @media (max-width: 1024px) {
-  .about-page .about-mv .arrow-img {
+  .about-page .about-mv .arrow-img img {
     width: 50px;
   }
 }

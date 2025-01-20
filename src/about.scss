@@ -70,21 +70,10 @@ html {
             }
         }
 
-        &__text {
-            @include functions.notosans;
-            font-size: 40px;
-            font-weight: 600;
-            color: #000000;
-            display: flex;
-            align-items: center;
-
-            @include functions.respond-to(tb) {
-                font-size: 24px;
-            }
-        }
-
         .arrow-img {
-            width: 70px;
+            
+            img {
+                width: 70px;
             animation: arrow 2s infinite;
 
             @include functions.respond-to(tb) {
@@ -103,6 +92,7 @@ html {
                 100% {
                     transform: translateY(0);
                 }
+            }
             }
         }
     }
