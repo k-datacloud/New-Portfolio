@@ -184,6 +184,7 @@ html {
     position: fixed;
     top: 0;
     visibility: hidden;
+    z-index: 999;
   }
 }
 .header .sp-nav-act {
@@ -611,7 +612,7 @@ html {
 }
 @media (max-width: 1024px) {
   .about-page .about-mv__title {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 .about-page .about-mv .arrow-img img {
@@ -681,8 +682,7 @@ html {
 }
 .about-page .about .about-inner {
   width: 100%;
-  padding: 0vw 20vw;
-  margin-top: -4vw;
+  padding: 0vw 4vw;
 }
 @media (max-width: 1024px) {
   .about-page .about .about-inner {
@@ -693,9 +693,8 @@ html {
 .about-page .about .profile {
   width: 100%;
   display: flex;
-  gap: 60px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #000000;
+  justify-content: space-between;
+  margin-bottom: 80px;
 }
 @media (max-width: 768px) {
   .about-page .about .profile {
@@ -708,9 +707,9 @@ html {
   flex: 1;
   font-family: "Instrument Sans", serif;
   font-optical-sizing: auto;
-  font-size: 32px;
+  font-size: 56px;
   font-weight: 600;
-  color: #000000;
+  color: #1A1919;
   opacity: 0;
   transform: translateY(20px);
   transition: 0.7s;
@@ -741,10 +740,11 @@ html {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   line-height: 2.2;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: justify;
   letter-spacing: 1px;
   word-spacing: normal;
+  color: #868686;
 }
 @media (max-width: 768px) {
   .about-page .about .profile__text--ja {
@@ -753,15 +753,13 @@ html {
   }
 }
 .about-page .about .profile__text--en {
-  color: #717171;
-  font-family: "Raleway", sans-serif;
+  color: #1A1919;
+  font-family: "Instrument Sans", serif;
   font-optical-sizing: auto;
-  font-style: normal;
-  font-size: 1.6rem;
-  line-height: 2.4;
-  text-align: justify;
-  word-spacing: normal;
-  font-feature-settings: "kern" 0;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  line-height: 2;
+  font-weight: 600;
 }
 @media (max-width: 768px) {
   .about-page .about .profile__text--en {
@@ -780,68 +778,77 @@ html {
   font-feature-settings: "kern" 0;
 }
 .about-page .about .skills {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .about-page .about .skills {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.about-page .about .skills__title {
+  font-family: "Instrument Sans", serif;
+  font-optical-sizing: auto;
+  font-size: 56px;
+  color: #1A1919;
+  font-weight: 600;
+  transform: translateY(20px);
+  transition: 0.7s;
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  .about-page .about .skills__title {
+    font-size: 24px;
+  }
+}
+.about-page .about .skills .active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.about-page .about .skills .skills-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.about-page .about .skills .skills-wrap__item {
+  font-family: "Instrument Sans", serif;
+  font-optical-sizing: auto;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1A1919;
+}
+@media (max-width: 768px) {
+  .about-page .about .skills .skills-wrap__item {
+    font-size: 24px;
+  }
+}
+.about-page .about .AnimeImg {
   width: 100%;
   padding: 0 20vw;
 }
 @media (max-width: 768px) {
-  .about-page .about .skills {
+  .about-page .about .AnimeImg {
     padding: 0 5vw;
   }
 }
 @media (max-width: 768px) {
-  .about-page .about .skills__item {
+  .about-page .about .AnimeImg__item {
     width: 30%;
   }
 }
-.about-page .about .skills .skills-title {
-  font-weight: 500;
-  font-size: 40px;
-  color: #333333;
-  margin-bottom: 40px;
-}
-@media (max-width: 768px) {
-  .about-page .about .skills .skills-title {
-    font-size: 24px;
-  }
-}
-.about-page .about .skills__title {
-  font-size: 32px;
-  color: #333333;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  font-weight: normal;
-}
-@media (max-width: 768px) {
-  .about-page .about .skills__title {
-    font-size: 20px;
-  }
-}
-.about-page .about .skills__text {
-  font-size: 1.6rem;
-  color: #333333;
-  line-height: 2;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-@media (max-width: 768px) {
-  .about-page .about .skills__text {
-    font-size: 1.2rem;
-  }
-}
-.about-page .about .skills__img {
+.about-page .about .AnimeImg__img {
   width: 80px;
 }
-.about-page .about .skills__img--reverse {
+.about-page .about .AnimeImg__img--reverse {
   width: 80px;
   animation: waitAnimate_659845543 4s linear infinite;
   transform-origin: 50% 50%;
   perspective: 120px;
 }
 @media (max-width: 768px) {
-  .about-page .about .skills__img--reverse {
+  .about-page .about .AnimeImg__img--reverse {
     width: 70px;
     display: block;
     margin: 0 auto;
@@ -869,13 +876,13 @@ html {
     transform: rotateY(360deg);
   }
 }
-.about-page .about .skills__img--float {
+.about-page .about .AnimeImg__img--float {
   width: 80px;
   position: relative;
   animation: floatAndBack 5s ease-in-out infinite;
 }
 @media (max-width: 768px) {
-  .about-page .about .skills__img--float {
+  .about-page .about .AnimeImg__img--float {
     width: 70px;
     display: block;
     margin: 0 auto;
@@ -905,12 +912,12 @@ html {
     animation-timing-function: ease-out;
   }
 }
-.about-page .about .skills-menu {
+.about-page .about .AnimeImg-menu {
   display: flex;
   justify-content: space-around;
 }
 @media (max-width: 768px) {
-  .about-page .about .skills-menu {
+  .about-page .about .AnimeImg-menu {
     flex-wrap: wrap;
     gap: 12px;
   }
@@ -942,9 +949,8 @@ html {
   }
 }
 .works .sub-works .sub-works-inner {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 900px;
+  width: 100%;
+  padding: 0 4vw;
 }
 @media (max-width: 768px) {
   .works .sub-works .sub-works-inner {
@@ -987,9 +993,10 @@ html {
   flex-wrap: wrap;
   align-items: center;
   gap: 50px;
+  margin-bottom: 40px;
 }
 .works .sub-works .works-wrap {
-  width: 45%;
+  width: 48%;
 }
 @media (max-width: 768px) {
   .works .sub-works .works-wrap {
@@ -999,6 +1006,9 @@ html {
 .works .sub-works .works-item {
   width: 100%;
   position: relative;
+}
+.works .sub-works .works-item img {
+  width: 100%;
 }
 .works .sub-works .works-item .mask {
   width: 0;
@@ -1063,6 +1073,193 @@ html {
 .works .sub-works .wp-post-image {
   width: 100%;
   height: auto;
+}
+
+.post-page {
+  width: 100%;
+  padding: 0 4vw;
+  margin-bottom: 120px;
+}
+@media (max-width: 1024px) {
+  .post-page {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  .post-page {
+    margin-bottom: 80px;
+  }
+}
+.post-page .post-page-inner {
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .post-page .post-page-inner {
+    width: 90%;
+  }
+}
+.post-page .post-container {
+  margin-bottom: 120px;
+}
+.post-page .post-container img {
+  width: 100%;
+}
+.post-page__title {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 80px;
+  color: #333333;
+}
+@media (max-width: 1024px) {
+  .post-page__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+  }
+}
+.post-page .detail {
+  margin-bottom: 120px;
+}
+@media (max-width: 768px) {
+  .post-page .detail {
+    margin-bottom: 80px;
+  }
+}
+.post-page .detail .detail-item {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .post-page .detail .detail-item {
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+}
+.post-page .detail .detail-item:last-child {
+  margin-bottom: 0;
+}
+.post-page .detail__title {
+  font-family: "Instrument Sans", serif;
+  font-optical-sizing: auto;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  flex: 1;
+  color: #868686;
+}
+@media (max-width: 768px) {
+  .post-page .detail__title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+}
+.post-page .detail__text {
+  flex: 5;
+  font-family: "Instrument Sans", serif;
+  font-optical-sizing: auto;
+  font-size: 3.2rem;
+  text-align: right;
+  color: #222222;
+}
+@media (max-width: 768px) {
+  .post-page .detail__text {
+    font-size: 1.2rem;
+  }
+}
+.post-page .detail__text--en {
+  font-family: "Instrument Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 3.2rem;
+  text-align: right;
+  flex: 5;
+  color: #222222;
+}
+@media (max-width: 768px) {
+  .post-page .detail__text--en {
+    font-size: 1.4rem;
+  }
+}
+.post-page .detail__text--url {
+  font-family: "Instrument Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 3.2rem;
+  text-align: right;
+  flex: 5;
+  color: #222222;
+  position: relative;
+}
+.post-page .detail__text--url:after {
+  content: "";
+  display: block;
+  margin: 4px auto 0 auto;
+  width: 100%;
+  height: 1.5px;
+  background-color: #1A1919;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left top;
+  transition: 0.3s ease-in-out;
+}
+.post-page .detail__text--url:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .post-page .detail__text--url {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .post-page .detail .text-outline {
+    line-height: 2.4;
+  }
+}
+.post-page__text {
+  text-align: center;
+}
+.post-page__link {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  color: #1A1919;
+  font-size: 16px;
+  letter-spacing: 1.8px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .post-page__link {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+.post-page__link:after {
+  content: "";
+  display: block;
+  margin: 4px auto 0 auto;
+  width: 15%;
+  height: 1.5px;
+  background-color: #1A1919;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left top;
+  transition: 0.3s ease-in-out;
+}
+.post-page__link:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+  transition: 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

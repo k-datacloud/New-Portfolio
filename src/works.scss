@@ -46,9 +46,8 @@
         }
 
         .sub-works-inner {
-            width: 80%;
-            margin: 0 auto;
-            max-width: 900px;
+            width: 100%;
+            padding: 0 4vw;
 
             @include functions.respond-to(sp) {
                 width: 90%;
@@ -88,10 +87,11 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 50px;
+            margin-bottom: 40px;
         }
 
         .works-wrap {
-            width: 45%;
+            width: 48%;
 
             @include functions.respond-to(sp) {
                 width: 100%;
@@ -101,6 +101,10 @@
         .works-item {
             width: 100%;
             position: relative;
+
+            img {
+                width: 100%;
+            }
 
             .mask {
                 width: 0;

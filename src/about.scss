@@ -106,7 +106,7 @@ html {
             }
 
             @include functions.respond-to(tb) {
-                font-size: 60px;
+                font-size: 50px;
             }
         }
 
@@ -187,8 +187,7 @@ html {
 
         .about-inner {
             width: 100%;
-            padding: 0vw 20vw;
-            margin-top: -4vw;
+            padding: 0vw 4vw;
 
             @include functions.respond-to(tb) {
                 padding: 7vw 5vw;
@@ -199,9 +198,8 @@ html {
         .profile {
             width: 100%;
             display: flex;
-            gap: 60px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #000000;
+            justify-content: space-between;
+            margin-bottom: 80px;
 
             @include functions.respond-to(sp) {
                 margin-bottom: 32px;
@@ -212,9 +210,9 @@ html {
             &__title {
                 flex: 1;
                 @include functions.instrument;
-                font-size: 32px;
+                font-size: 56px;
                 font-weight: 600;
-                color: #000000;
+                color: #1A1919;
                 opacity: 0;
                 transform: translateY(20px);
                 transition:  0.7s;
@@ -244,10 +242,11 @@ html {
                 &--ja {
                     @include functions.notosans;
                     line-height: 2.2;
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                     text-align: justify;
                     letter-spacing: 1px;
                     word-spacing: normal;
+                    color: #868686;
 
                     @include functions.respond-to(sp) {
                         font-size: 1.2rem;
@@ -256,13 +255,12 @@ html {
                 }
 
                 &--en {
-                    color: #717171;
-                    @include functions.raleway;
-                    font-size: 1.6rem;
-                    line-height: 2.4;
-                    text-align: justify;
-                    word-spacing: normal;
-                    font-feature-settings: "kern" 0;
+                    color: #1A1919;
+                    @include functions.instrument;
+                    font-size: 2.8rem;
+                    letter-spacing: 1px;
+                    line-height: 2;
+                    font-weight: 600;
 
                     @include functions.respond-to(sp) {
                         font-size: 1.2rem;
@@ -283,6 +281,53 @@ html {
         }
 
         .skills {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 100px;
+
+            @include  functions.respond-to(sp) {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            &__title {
+                @include functions.instrument;
+                font-size: 56px;
+                color: #1A1919;
+                font-weight: 600;
+                transform: translateY(20px);
+                transition: .7s;
+                opacity: 0;
+
+                @include  functions.respond-to(sp) {
+                    font-size: 24px;
+                }
+            }
+
+            .active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .skills-wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;  
+                
+                &__item {
+                    @include functions.instrument;
+                    font-size: 32px;
+                    font-weight: 600;
+                    color: #1A1919;
+
+                    @include functions.respond-to(sp) {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        .AnimeImg {
             width: 100%;
             padding: 0 20vw;
 
@@ -294,42 +339,6 @@ html {
                 
                 @include functions.respond-to(sp) {
                     width: 30%;
-                }
-            }
-
-            .skills-title {
-                font-weight: 500;
-                font-size: 40px;
-                color: #333333;
-                margin-bottom: 40px;
-
-                @include functions.respond-to(sp) {
-                    font-size: 24px;
-                }
-            }
-
-            &__title {
-                font-size: 32px;
-                color: #333333;
-                letter-spacing: 1px;
-                margin-bottom: 20px;
-                font-weight: normal;
-
-                @include functions.respond-to(sp) {
-                    font-size: 20px;
-                }
-            }
-
-            &__text {
-                font-size: 1.6rem;
-                color: #333333;
-                line-height: 2;
-                letter-spacing: 1px;
-                margin-bottom: 30px;
-                @include functions.raleway;
-
-                @include functions.respond-to(sp) {
-                    font-size: 1.2rem;
                 }
             }
 
@@ -423,7 +432,7 @@ html {
             }
         }
 
-        .skills-menu {
+        .AnimeImg-menu {
             display: flex;
             justify-content: space-around;
 

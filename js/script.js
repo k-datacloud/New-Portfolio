@@ -56,19 +56,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })
 
-const profiles = document.querySelectorAll('.profile');
+const profiles = document.querySelectorAll('.AboutShowUp');
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     
     profiles.forEach(profile => {
         const top = profile.getBoundingClientRect().top;
-        const profileTitle = profile.querySelector('.profile__title');
+        const profileTitle = profile.querySelector('.AboutShowUp-Title');
         console.log(scrollY);
         console.log(top);
 
         if ( scrollY > ( top + 100 ) ) {
             profileTitle.classList.add('active');
+            
         } else {
             profileTitle.classList.remove('active');
         }
