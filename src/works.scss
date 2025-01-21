@@ -5,19 +5,19 @@
 .works {
     font-family: 'Raleway', sans-serif;
 
-    &::after {
-        content: "";
-        position: fixed;
-        /*固定表示*/
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 999;
-        background-color: rgba($color: #FFFFFF, $alpha: 1);
-        animation: min-anim 2s forwards;
-        transform-origin: left;
-    }
+    // &::after {
+    //     content: "";
+    //     position: fixed;
+    //     /*固定表示*/
+    //     top: 0;
+    //     left: 0;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     z-index: 999;
+    //     background-color: rgba($color: #FFFFFF, $alpha: 1);
+    //     animation: min-anim 2s forwards;
+    //     transform-origin: left;
+    // }
 
     /*背景が縮むアニメーション*/
     // @keyframes min-anim {

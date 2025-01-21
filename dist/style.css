@@ -931,19 +931,6 @@ html {
   font-family: "Raleway", sans-serif;
   /*背景が縮むアニメーション*/
 }
-.works::after {
-  content: "";
-  position: fixed;
-  /*固定表示*/
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999;
-  background-color: white;
-  animation: min-anim 2s forwards;
-  transform-origin: left;
-}
 .works .sub-works {
   width: 100%;
   margin-bottom: 160px;
