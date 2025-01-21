@@ -12,7 +12,39 @@ html {
     height: 100%;
     font-family: 'instrument', sans-serif;
     overflow: hidden;
-    background-color: #FFFFFF;
+
+    &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        background-color: rgba($color: #222222, $alpha: 1);
+        transform-origin: top;
+        animation: slideUp 2s forwards;
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(0%);
+            }
+            50% {
+                transform: translateY(0%); 
+                background-color: #222222; 
+            }
+
+            // 70% {
+            //     transform: translateY(0%); 
+            //     background-color: rgba(0, 0, 0, .8); 
+            // }
+
+            100% {
+                transform: translateY(100%);
+                background-color: #222222;
+            }
+        }
+    }
 
     @include functions.respond-to('sp') {
         overflow: auto;
@@ -258,6 +290,7 @@ html {
                 font-size: 1.6rem;
                 letter-spacing: .1rem;
                 font-weight: 700;
+                cursor: pointer;
 
                 &--sn {
                     font-size: 1.4rem;
@@ -380,6 +413,7 @@ html {
                 position: relative;
                 font-size: 2rem;
                 font-weight: 600;
+                cursor: pointer;
 
                 @include functions.respond-to(tb) {
                     font-size: 2rem;
@@ -429,16 +463,16 @@ html {
     }
 
     &__title1 {
-        animation: textmove 24s linear infinite;
+        animation: ContactTextMove 24s linear infinite;
         white-space: nowrap;
     }
 
     &__title2 {
-        animation: textmove 24s linear infinite;
+        animation: ContactTextMove 24s linear infinite;
         white-space: nowrap;
     }
 
-    @keyframes textmove {
+    @keyframes ContactTextMove {
 
         100% {
             transform: translateX(-100%);
@@ -446,7 +480,7 @@ html {
     }
 
     .text-loop {
-        @include functions.raleway;
+        @include functions.instrument;
         font-size: 120px;
         letter-spacing: .4rem;
         font-weight: 500;

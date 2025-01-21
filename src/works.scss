@@ -20,21 +20,21 @@
     }
 
     /*背景が縮むアニメーション*/
-    @keyframes min-anim {
-        0% {
-            transform: scaleX(1);
-        }
+    // @keyframes min-anim {
+    //     0% {
+    //         transform: scaleX(1);
+    //     }
 
-        80% {
-            transform: scaleX(1);
-            background-color: rgba($color: #FFFFFF, $alpha: .8);
-        }
+    //     80% {
+    //         transform: scaleX(1);
+    //         background-color: rgba($color: #FFFFFF, $alpha: .8);
+    //     }
 
-        100% {
-            transform: scaleX(0);
-            visibility: hidden;
-        }
-    }
+    //     100% {
+    //         transform: scaleX(0);
+    //         visibility: hidden;
+    //     }
+    // }
 
     .sub-works {
         width: 100%;

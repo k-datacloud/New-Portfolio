@@ -74,3 +74,28 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+const emailBtn = document.querySelector('.copyemail');
+
+emailBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText('k25ts09@outlook.jp');
+    emailBtn.textContent = 'Copied!';
+    setTimeout(() => {
+        emailBtn.textContent = 'Copy Email';
+    }, 2000);
+})
+
+const slideDownBtn = document.querySelector('.slideDownBtn');
+const space = document.querySelector('.space');
+
+slideDownBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    setTimeout(() => {
+        window.location.href = 'index.html';
+    }, 1800);
+
+    space.classList.add('loader');
+    setTimeout(() => {
+        space.classList.remove('loader');
+    }, 2000)
+})
