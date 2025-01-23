@@ -7,11 +7,11 @@ html {
     font-size: 62.5%;
 }
 
-.frontbody {
+.body {
     width: 100%;
     height: 100%;
     font-family: 'instrument', sans-serif;
-    overflow: hidden;
+    background-color: #FFFFFF;
 
     &::after {
         content: "";
@@ -46,77 +46,84 @@ html {
         }
     }
 
-    @include functions.respond-to('sp') {
-        overflow: auto;
-    }
-
-
     .mv {
         width: 100%;
-        height: calc(100vh - 160px);
-
-        .mv-inner {
-            width: 100%;
-            height: 100%;
-        }
-
-        .mv-img {
-            width: 100%;
-            padding: 0 10vw;
-            height: calc(80% - 20px);
-
-
-            @include functions.respond-to(sp) {
-                width: 100%;
-                height: 70%;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .mv-list {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-top: 60px;
-            padding: 0 80px;
-
-            @include functions.respond-to(sp) {
-                padding: 0 20px;
-            }
-        }
-
-        .mv-item {
-            margin-right: 30px;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-
-        .mv-link {
+        padding:  0 4vw;
+        margin-bottom: 160px;
+    
+        &__title {
             @include functions.instrument;
-            font-size: 2.2rem;
-            color: #868686;
-            font-weight: 600;
-
-            @include functions.respond-to(sp) {
-                font-size: 1.2rem;
-            }
+            font-size: 86px;
+            color: #1A1919;
+            font-weight: 700;
         }
     }
 
 
-    
+    .works {
+        width: 100%;
+        margin-bottom: 80px;
+        padding: 0 4vw;
 
+        .workCases {
+
+            &__link {
+                display: block;
+                border-bottom: 1px solid #1A1919;
+                padding-bottom: 20px;
+            }
+
+            .workCases__text {
+                @include functions.instrument;
+                font-size: 70px;
+                color: #1A1919;
+                font-weight: 700;
+                transform: translateY(100px);
+                transition: 1s;
+            }
+
+            .active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .mv-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 80px;
+
+        @include functions.respond-to(sp) {
+            padding: 0 20px;
+        }
+    }
+
+    .mv-item {
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .mv-link {
+        @include functions.instrument;
+        font-size: 2.2rem;
+        color: #868686;
+        font-weight: 600;
+
+        @include functions.respond-to(sp) {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .header {
     width: 100%;
     padding: 40px 0;
+    margin-bottom: 80px;
     box-sizing: border-box;
     position: relative;
 
@@ -136,7 +143,7 @@ html {
         &--logo {
             @include functions.instrument;
             font-size: 1.8rem;
-            font-weight: 500;
+            font-weight: 600;
             color: #222222;
             display: block;
             margin-bottom: 16px;
