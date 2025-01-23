@@ -88,36 +88,6 @@ html {
             }
         }
     }
-
-    .mv-list {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 0 80px;
-
-        @include functions.respond-to(sp) {
-            padding: 0 20px;
-        }
-    }
-
-    .mv-item {
-        margin-right: 30px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    .mv-link {
-        @include functions.instrument;
-        font-size: 2.2rem;
-        color: #868686;
-        font-weight: 600;
-
-        @include functions.respond-to(sp) {
-            font-size: 1.2rem;
-        }
-    }
 }
 
 .header {
@@ -452,13 +422,18 @@ html {
     }
 }
 
-.contact {
+
+
+.footer {
+   width: 100%;
+   box-sizing: border-box;
+
+   .contact {
     width: 100%;
-    border-bottom: 2px solid #777777;
+    margin-bottom: 80px;
 
     .contact-inner {
         display: flex;
-        background-color: #1A1919;
         padding: 140px 0;
         width: 100%;
         margin: 0 auto;
@@ -471,12 +446,12 @@ html {
     }
 
     &__title1 {
-        animation: ContactTextMove 24s linear infinite;
+        animation: ContactTextMove 40s linear infinite;
         white-space: nowrap;
     }
 
     &__title2 {
-        animation: ContactTextMove 24s linear infinite;
+        animation: ContactTextMove 40s linear infinite;
         white-space: nowrap;
     }
 
@@ -489,10 +464,10 @@ html {
 
     .text-loop {
         @include functions.instrument;
-        font-size: 120px;
+        font-size: 160px;
         letter-spacing: .4rem;
-        font-weight: 500;
-        color: #fff;
+        font-weight: 600;
+        color: #1A1919;
         padding: 0 20px;
 
         @include functions.respond-to(sp) {
@@ -503,104 +478,32 @@ html {
         }
     }
 
-}
+    }
 
-.footer {
-   width: 100%;
-    box-sizing: border-box;
-    background-color: #1A1919;
-
-    .circle {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: #fff 1px solid;
+    .footer-menu {
         display: flex;
-        justify-content: center;
-        position: relative;
+        justify-content: space-between;
+        padding: 2vw 4vw;
 
-        &__text {
-            @include functions.raleway;
-            color: #fff;
-        }
-    }
-
-    .footer-inner {
-       padding: 7vw 10vw;
-       display: flex;
-       justify-content: flex-end;
-       gap: 60px;
-
-        @include functions.respond-to(sp) {
-            padding: 7vw 5vw;
+        &__list {
+            display: flex;
+            flex-direction: row;
             gap: 20px;
-            flex-direction: column;
-        }
-    }
-
-    .footer-list {
-
-        &__title {
-            @include functions.instrument;
-            letter-spacing: 1px;
-            font-weight: 600;
-            color: #777777;
-            font-size: 2rem;
-            margin-bottom: 25px;
-
-            @include functions.respond-to(tb) {
-                font-size: 1.6rem;
-            }
-        }
-
-        &__item {
-            list-style: none;
-            margin-bottom: 25px;
         }
 
         &__link {
             @include functions.instrument;
-            font-weight: normal;
+            text-decoration: none;
+            color: #777777;
+            font-size: 3.2rem;
             font-weight: 600;
-            color: #ffffff;
-            font-size: 1.8rem;
-            position: relative;
-
-            @include functions.respond-to(tb) {
-                font-size: 1.2rem;
-            }
-
-            &:after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 1.5px;
-                background-color: #FFFFFF;
-                position: absolute;
-                top: 30px;
-                opacity: 0;
-                transform: scaleX(0);
-                transform-origin: left top;
-                transition: .3s ease-in-out;
-            }
-
-            &:hover::after {
-                opacity: 1;
-                transform: scaleX(1);
-                transition: .3s ease-in-out;
-            }
         }
-    }
 
-    .footer-follow {
-        border: none;
-    }
-
-    .copyright {
-        @include functions.instrument;
-        color: #777777;
-        font-size: 10px;
-        text-align: center;
-        padding-bottom: 32px;
+        .copyright {
+            @include functions.instrument;
+            color: #777777;
+            font-size: 3.2rem;
+            font-weight: 600;
+        }
     }
 }
