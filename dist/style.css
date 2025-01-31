@@ -877,12 +877,6 @@ html {
     width: 90%;
   }
 }
-.post-page .post-container {
-  margin-bottom: 120px;
-}
-.post-page .post-container img {
-  width: 100%;
-}
 .post-page__title {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -921,6 +915,13 @@ html {
 }
 .post-page .detail .detail-item:last-child {
   margin-bottom: 0;
+}
+.post-page .detail .video {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.post-page .detail .video video {
+  width: 60%;
 }
 .post-page .detail .outlineFlex {
   display: flex;
