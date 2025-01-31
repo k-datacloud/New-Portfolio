@@ -68,9 +68,18 @@ html {
         .workCases {
             display: flex;
 
+            @include functions.respond-to(sp) {
+                flex-direction: column;
+                gap: 20px;
+            }
+
             &__item {
                 display: block;
                 width: 50%;
+
+                @include functions.respond-to(sp) {
+                    width: 100%;
+                }
 
                 img {
                     width: 100%;
