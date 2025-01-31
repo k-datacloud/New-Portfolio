@@ -48,8 +48,8 @@ html {
 
     .mv {
         width: 100%;
+        height: 80vh;
         padding:  0 4vw;
-        margin-bottom: 160px;
     
         &__title {
             @include functions.instrument;
@@ -63,28 +63,25 @@ html {
     .works {
         width: 100%;
         margin-bottom: 80px;
-        padding: 0 4vw;
+        padding: 2vw;
 
         .workCases {
+            display: flex;
 
-            &__link {
+            &__item {
                 display: block;
-                border-bottom: 1px solid #1A1919;
-                padding-bottom: 20px;
-            }
+                width: 50%;
 
-            .workCases__text {
-                @include functions.instrument;
-                font-size: 70px;
-                color: #1A1919;
-                font-weight: 700;
-                transform: translateY(100px);
-                transition: 1s;
-            }
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                    transition: .1s ease-in-out;
 
-            .active {
-                opacity: 1;
-                transform: translateY(0);
+                    &:hover {
+                        transform: scale(.95);
+                        transition: .1s ease-in-out;
+                    }
+                }
             }
         }
     }
