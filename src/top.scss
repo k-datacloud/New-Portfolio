@@ -56,6 +56,10 @@ html {
             font-size: 86px;
             color: #1A1919;
             font-weight: 700;
+
+            @include functions.respond-to(sp) {
+                font-size: 48px;
+            }
         }
     }
 
@@ -125,7 +129,7 @@ html {
             margin-bottom: 16px;
 
             @include functions.respond-to(sp) {
-                font-size: 1.2rem;
+                font-size: 1.6rem;
                 margin-bottom: 12px;
             }
         }
@@ -211,7 +215,7 @@ html {
         @include functions.respond-to(tb) {
             width: 60%;
             height: 100vh;
-            background-color: #000000;
+            background-color: #1A1919;
             position: fixed;
             top: 0;
             right: 0;
@@ -272,15 +276,14 @@ html {
                 color: #ffffff;
                 position: relative;
                 font-size: 1.6rem;
-                letter-spacing: .1rem;
                 font-weight: 700;
                 cursor: pointer;
 
                 &--sn {
-                    font-size: 1.4rem;
+                    font-size: 1.6rem;
                     color: #ffffff;
                     font-weight: 700;
-                    letter-spacing: .1rem;
+
                     display: flex;
                     align-items: center;
                     gap: 10px;
@@ -487,6 +490,7 @@ html {
     }
 
     .footer-menu {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         padding: 2vw 4vw;
@@ -495,6 +499,11 @@ html {
             display: flex;
             flex-direction: row;
             gap: 20px;
+
+            @include functions.respond-to(sp) {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
 
         &__link {
@@ -503,6 +512,10 @@ html {
             color: #777777;
             font-size: 3.2rem;
             font-weight: 600;
+
+            @include functions.respond-to(sp) {
+                font-size: 2.2rem;
+            }
         }
 
         .copyright {
@@ -510,6 +523,10 @@ html {
             color: #777777;
             font-size: 3.2rem;
             font-weight: 600;
+
+            @include functions.respond-to(sp) {
+                font-size: 2.2rem;
+            }
         }
     }
 }

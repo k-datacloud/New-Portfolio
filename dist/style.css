@@ -46,6 +46,11 @@ html {
   color: #1A1919;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  .body .mv__title {
+    font-size: 48px;
+  }
+}
 .body .works {
   width: 100%;
   margin-bottom: 80px;
@@ -108,7 +113,7 @@ html {
 }
 @media (max-width: 768px) {
   .header__title--logo {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 12px;
   }
 }
@@ -181,7 +186,7 @@ html {
   .header .sp-grnav {
     width: 60%;
     height: 100vh;
-    background-color: #000000;
+    background-color: #1A1919;
     position: fixed;
     top: 0;
     right: 0;
@@ -242,15 +247,13 @@ html {
   color: #ffffff;
   position: relative;
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   font-weight: 700;
   cursor: pointer;
 }
 .header .sp-grnav .header-list__link--sn {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #ffffff;
   font-weight: 700;
-  letter-spacing: 0.1rem;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -436,6 +439,7 @@ html {
   }
 }
 .footer .footer-menu {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 2vw 4vw;
@@ -445,6 +449,12 @@ html {
   flex-direction: row;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .footer .footer-menu__list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 .footer .footer-menu__link {
   font-family: "Instrument Sans", serif;
   font-optical-sizing: auto;
@@ -453,12 +463,22 @@ html {
   font-size: 3.2rem;
   font-weight: 600;
 }
+@media (max-width: 768px) {
+  .footer .footer-menu__link {
+    font-size: 2.2rem;
+  }
+}
 .footer .footer-menu .copyright {
   font-family: "Instrument Sans", serif;
   font-optical-sizing: auto;
   color: #777777;
   font-size: 3.2rem;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .footer .footer-menu .copyright {
+    font-size: 2.2rem;
+  }
 }
 
 html {
@@ -509,6 +529,11 @@ html {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+}
+@media (max-width: 768px) {
+  .about-page .about-mv {
+    justify-content: start;
+  }
 }
 .about-page .about-mv__title {
   font-family: "Instrument Sans", serif;
@@ -575,29 +600,6 @@ html {
   color: #000000;
   margin-bottom: 100px;
   text-align: center;
-}
-.about-page .about .resume {
-  position: sticky;
-  width: 100px;
-  top: 50%;
-  left: 87%;
-  padding: 2vw 0;
-}
-@media (max-width: 1024px) {
-  .about-page .about .resume {
-    display: none;
-  }
-}
-.about-page .about .resume__text {
-  writing-mode: vertical-lr;
-}
-.about-page .about .resume__text--en {
-  color: #717171;
-  font-family: "Instrument Sans", serif;
-  font-optical-sizing: auto;
-  font-size: 28px;
-  font-weight: 600;
-  display: block;
 }
 .about-page .about .about-inner {
   width: 100%;
@@ -667,7 +669,7 @@ html {
 }
 @media (max-width: 768px) {
   .about-page .about .profile__text--ja {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2.4;
   }
 }
@@ -682,7 +684,8 @@ html {
 }
 @media (max-width: 768px) {
   .about-page .about .profile__text--en {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
   }
 }
 .about-page .about .profile__text--skill {
@@ -872,11 +875,6 @@ html {
 .post-page .post-page-inner {
   width: 100%;
 }
-@media (max-width: 1024px) {
-  .post-page .post-page-inner {
-    width: 90%;
-  }
-}
 .post-page__title {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -923,9 +921,20 @@ html {
 .post-page .detail .video video {
   width: 60%;
 }
+@media (max-width: 768px) {
+  .post-page .detail .video video {
+    width: 100%;
+  }
+}
 .post-page .detail .outlineFlex {
   display: flex;
   gap: 100px;
+}
+@media (max-width: 768px) {
+  .post-page .detail .outlineFlex {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 .post-page .detail .outline {
   display: flex;
@@ -941,6 +950,12 @@ html {
   font-weight: 600;
   color: #1A1919;
 }
+@media (max-width: 768px) {
+  .post-page .detail .outline__en {
+    font-size: 2.4rem;
+    line-height: 140%;
+  }
+}
 .post-page .detail .outline__ja {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
@@ -950,6 +965,12 @@ html {
   font-weight: 600;
   text-align: justify;
   color: #868686;
+}
+@media (max-width: 768px) {
+  .post-page .detail .outline__ja {
+    font-size: 1.4rem;
+    line-height: 2.4;
+  }
 }
 .post-page .detail__title {
   font-family: "Instrument Sans", serif;
@@ -962,8 +983,7 @@ html {
 }
 @media (max-width: 768px) {
   .post-page .detail__title {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 2.4rem;
     line-height: 1.6;
   }
 }
@@ -991,7 +1011,7 @@ html {
 }
 @media (max-width: 768px) {
   .post-page .detail__text--en {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
   }
 }
 .post-page .detail__text--url {
@@ -1026,7 +1046,7 @@ html {
 }
 @media (max-width: 768px) {
   .post-page .detail__text--url {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
   }
 }
 @media (max-width: 768px) {

@@ -18,10 +18,6 @@
 
     .post-page-inner {
         width: 100%;
-
-        @include functions.respond-to(tb) {
-            width: 90%;
-        }
     }
 
     &__title {
@@ -66,12 +62,21 @@
             text-align: center;
             video {
                 width: 60%;
+
+                @include functions.respond-to(sp) {
+                    width: 100%;
+                }
             }
         }
 
         .outlineFlex {
             display: flex;
             gap: 100px;
+
+            @include functions.respond-to(sp) {
+                flex-direction: column;
+                gap: 20px;
+            }
         }
 
 
@@ -88,6 +93,11 @@
                 line-height: 2;
                 font-weight: 600;
                 color: #1A1919;
+
+                @include functions.respond-to(sp) {
+                    font-size: 2.4rem;
+                    line-height: 140%;
+                }
             }
 
             &__ja {
@@ -98,6 +108,11 @@
                 font-weight: 600;
                 text-align: justify;
                 color: #868686;
+
+                @include functions.respond-to(sp) {
+                    font-size: 1.4rem;
+                    line-height: 2.4;
+                }
             }
         }
 
@@ -110,8 +125,7 @@
             color: #868686;
 
             @include functions.respond-to(sp) {
-                font-size: 1.6rem;
-                margin-bottom: 10px;
+                font-size: 2.4rem;
                 line-height: 1.6;
             }
         }
@@ -136,7 +150,7 @@
                 color: #222222;
 
                 @include functions.respond-to(sp) {
-                    font-size: 1.4rem;
+                    font-size: 2.4rem;
                 }
             }
 
@@ -172,7 +186,7 @@
                 }
 
                 @include functions.respond-to(sp) {
-                    font-size: 1.2rem;
+                    font-size: 2.4rem;
                 }
             }
         }

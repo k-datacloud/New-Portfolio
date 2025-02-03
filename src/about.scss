@@ -85,6 +85,10 @@ html {
         justify-content: center;
         gap: 40px;
 
+        @include functions.respond-to(sp) {
+            justify-content: start;
+        }
+
         &__title {
             @include functions.instrument;
             font-size: 100px;
@@ -161,30 +165,6 @@ html {
             text-align: center;
         }
 
-        .resume {
-            position: sticky;
-            width: 100px;
-            top: 50%;
-            left: 87%;
-            padding: 2vw 0;
-
-            @include functions.respond-to(tb) {
-                display: none;
-            }
-
-            &__text {
-                writing-mode: vertical-lr;
-
-                &--en {
-                    color: #717171;
-                    @include functions.instrument;
-                    font-size: 28px;
-                    font-weight: 600;
-                    display: block;
-                }
-            }
-        }
-
         .about-inner {
             width: 100%;
             padding: 0vw 4vw;
@@ -249,7 +229,7 @@ html {
                     color: #868686;
 
                     @include functions.respond-to(sp) {
-                        font-size: 1.2rem;
+                        font-size: 1.4rem;
                         line-height: 2.4;
                     }
                 }
@@ -263,7 +243,8 @@ html {
                     font-weight: 600;
 
                     @include functions.respond-to(sp) {
-                        font-size: 1.2rem;
+                        font-size: 1.6rem;
+                        letter-spacing: 1px;
                     }
                 }
 
