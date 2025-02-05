@@ -56,11 +56,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })
 
-const emailBtn = document.querySelector('.copyemail');
-emailBtn.addEventListener('click', () => {
-    navigator.clipboard.writeText('k25ts09@outlook.jp');
-    emailBtn.textContent = 'Copied!';
-    setTimeout(() => {
-        emailBtn.textContent = 'Copy Email';
-    }, 2000);
+const emailBtn = document.querySelectorAll('.copyemail');
+emailBtn.forEach((item, index) => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
+        for (let i = 0; i < emailBtn.length; i++) {
+            emailBtn[i].textContent = 'Copy Email';
+        }
+        navigator.clipboard.writeText('k25ts09@outlook.jp');
+        emailBtn[index].textContent = 'Copied!';
+        setTimeout(() => {
+            emailBtn[index].textContent = 'Copy Email';
+        }, 2000);
+    })
 })

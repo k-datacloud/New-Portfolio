@@ -39,6 +39,12 @@ html {
   height: 80vh;
   padding: 0 4vw;
 }
+@media (max-width: 768px) {
+  .body .mv {
+    height: auto;
+    margin-bottom: 80px;
+  }
+}
 .body .mv__title {
   font-family: "Instrument Sans", serif;
   font-optical-sizing: auto;
@@ -50,6 +56,9 @@ html {
   .body .mv__title {
     font-size: 48px;
   }
+}
+.body .mv .clickProfile {
+  color: #96C2F3;
 }
 .body .works {
   width: 100%;
@@ -90,6 +99,11 @@ html {
   margin-bottom: 80px;
   box-sizing: border-box;
   position: relative;
+}
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 40px;
+  }
 }
 .header .header-inner {
   padding: 0 80px;
@@ -444,6 +458,11 @@ html {
   justify-content: space-between;
   padding: 2vw 4vw;
 }
+@media (max-width: 768px) {
+  .footer .footer-menu {
+    padding: 4vw;
+  }
+}
 .footer .footer-menu__list {
   display: flex;
   flex-direction: row;
@@ -533,6 +552,8 @@ html {
 @media (max-width: 768px) {
   .about-page .about-mv {
     justify-content: start;
+    height: auto;
+    margin-bottom: 120px;
   }
 }
 .about-page .about-mv__title {
@@ -743,7 +764,7 @@ html {
 }
 @media (max-width: 768px) {
   .about-page .about .skills .skills-wrap__item {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 .about-page .about .AnimeImg {

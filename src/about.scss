@@ -87,6 +87,8 @@ html {
 
         @include functions.respond-to(sp) {
             justify-content: start;
+            height: auto;
+            margin-bottom: 120px;
         }
 
         &__title {
@@ -302,7 +304,7 @@ html {
                     color: #1A1919;
 
                     @include functions.respond-to(sp) {
-                        font-size: 24px;
+                        font-size: 18px;
                     }
                 }
             }
