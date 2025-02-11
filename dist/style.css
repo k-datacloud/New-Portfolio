@@ -65,6 +65,12 @@ html {
   margin-bottom: 80px;
   padding: 0 80px;
 }
+@media (max-width: 768px) {
+  .body .works {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+}
 .body .works .workCases {
   display: flex;
 }
