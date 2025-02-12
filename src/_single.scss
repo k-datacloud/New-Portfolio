@@ -4,16 +4,11 @@
 
 .post-page {
     width: 100%;
-    padding: 0 4vw;
+    padding: 0 10vw;
     margin-bottom: 120px;
 
-    @include functions.respond-to(tb) {
-        width: 100%;
-        margin-left: 0;
-
-        @include functions.respond-to(sp) {
-            margin-bottom: 80px;
-        }
+    @include functions.respond-to(sp) {
+        margin-bottom: 80px;
     }
 
     .post-page-inner {
@@ -71,10 +66,10 @@
 
         .outlineFlex {
             display: flex;
-            gap: 100px;
+            flex-direction: column;
+            gap: 40px;
 
             @include functions.respond-to(sp) {
-                flex-direction: column;
                 gap: 20px;
             }
         }
@@ -84,30 +79,29 @@
         .outline {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 20px;
 
             &__en {
                 @include functions.instrument;
-                font-size: 2.8rem;
-                letter-spacing: 1px;
-                line-height: 2;
-                font-weight: 600;
+                font-size: 2.2rem;
+                line-height: 200%;
+                font-weight: 400;
                 color: #1A1919;
 
                 @include functions.respond-to(sp) {
                     font-size: 2.4rem;
-                    line-height: 140%;
+                    line-height: 200%;
                 }
             }
 
             &__ja {
                 @include functions.notosans;
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 letter-spacing: 1px;
-                line-height: 2;
-                font-weight: 600;
+                line-height: 220%;
+                font-weight: 400;
                 text-align: justify;
-                color: #868686;
+                color: #1A1919;
 
                 @include functions.respond-to(sp) {
                     font-size: 1.4rem;
@@ -143,8 +137,8 @@
 
             &--en {
                 @include functions.instrument;
-                font-weight: 600;
-                font-size: 3.2rem;
+                font-weight: 500;
+                font-size: 2.8rem;
                 text-align: right;
                 flex: 5;
                 color: #222222;
@@ -156,8 +150,8 @@
 
             &--url {
                 @include functions.instrument;
-                font-weight: 600;
-                font-size: 3.2rem;
+                font-weight: 500;
+                font-size: 2.8rem;
                 text-align: right;
                 flex: 5;
                 color: #222222;
