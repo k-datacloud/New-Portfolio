@@ -36,6 +36,7 @@ html {
 }
 .body .mv {
   width: 100%;
+  margin-top: 120px;
   height: 80vh;
   padding: 0 80px;
 }
@@ -106,7 +107,6 @@ html {
 .header {
   width: 100%;
   padding: 40px 0;
-  margin-bottom: 80px;
   box-sizing: border-box;
   position: relative;
 }
@@ -890,7 +890,8 @@ html {
 .post-page {
   width: 100%;
   padding: 0 10vw;
-  margin-bottom: 120px;
+  margin-bottom: 160px;
+  margin-top: 160px;
 }
 @media (max-width: 768px) {
   .post-page {
@@ -929,20 +930,20 @@ html {
 }
 .post-page .detail .detail-item {
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 128px;
 }
 @media (max-width: 768px) {
   .post-page .detail .detail-item {
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 64px;
   }
 }
 .post-page .detail .detail-item:last-child {
   margin-bottom: 0;
 }
 .post-page .detail .contents {
-  margin-bottom: 80px;
+  margin-bottom: 160px;
   text-align: center;
 }
 .post-page .detail .contents video {
@@ -952,6 +953,9 @@ html {
   .post-page .detail .contents video {
     width: 100%;
   }
+}
+.post-page .detail .contents__img img {
+  width: 100%;
 }
 .post-page .detail .outlineFlex {
   display: flex;
@@ -973,7 +977,7 @@ html {
   font-optical-sizing: auto;
   font-size: 2.2rem;
   line-height: 200%;
-  font-weight: 400;
+  font-weight: 200;
   color: #1A1919;
 }
 @media (max-width: 768px) {
