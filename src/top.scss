@@ -88,16 +88,17 @@ html {
         .workCases {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            justify-content: space-between;
+            gap: 48px;
 
             @include functions.respond-to(sp) {
                 flex-direction: column;
-                gap: 20px;
+                gap: 80px;
             }
 
             &__item {
                 display: block;
-                width: 48%;
+                width: 46%;
 
                 @include functions.respond-to(sp) {
                     width: 100%;

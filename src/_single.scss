@@ -6,7 +6,7 @@
     width: 100%;
     padding: 0 10vw;
     margin-bottom: 160px;
-    margin-top: 160px;
+    margin-top: 128px;
 
     @include functions.respond-to(sp) {
         margin-bottom: 80px;

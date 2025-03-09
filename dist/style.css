@@ -76,17 +76,18 @@ html {
 .body .works .workCases {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 48px;
 }
 @media (max-width: 768px) {
   .body .works .workCases {
     flex-direction: column;
-    gap: 20px;
+    gap: 80px;
   }
 }
 .body .works .workCases__item {
   display: block;
-  width: 48%;
+  width: 46%;
 }
 @media (max-width: 768px) {
   .body .works .workCases__item {
@@ -891,7 +892,7 @@ html {
   width: 100%;
   padding: 0 10vw;
   margin-bottom: 160px;
-  margin-top: 160px;
+  margin-top: 128px;
 }
 @media (max-width: 768px) {
   .post-page {
